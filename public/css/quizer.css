@@ -1,0 +1,57 @@
+.adminForm{
+	width:600px;
+}
+.quizMenu{
+	font: 1em "Trebuchet MS", sans-serif;
+}
+.form-group {
+	margin-bottom: 5px;
+}
+.form-control-ht{
+	height: 30px;
+}
+label {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 1px;
+	font-weight: 700;
+}
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-left: initial;
+}
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+.ui-widget input, .ui-widget select, .ui-widget textarea {
+	font-family: Verdana,Arial,sans-serif;
+	font-size: 1em;
+	width: 290px;
+}
+.checkBoxWidth{
+	width: 15px !important;
+}
+.textArea{
+	margin: 0px;
+	height: 76px;
+	width: 584px !important;
+}
+
+.dvTakeTest{
+	padding-top: 20px;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 5px;
+  z-index: 10000;
+}
+
+.quizDialog {
+	width: 800px;
+	height: 700px;
+}

@@ -1,0 +1,129 @@
+/* @import url(http://fonts.googleapis.com/css?family=Rokkitt); */
+ h1 {
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-align: left;
+}
+ul {
+    list-style: none;
+}
+li {
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    /* font-size: 2em; */
+}
+input[type=radio] {
+    border: 0px;
+    width: 20px;
+    height: 10px;
+}
+p {
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/* Quiz Classes */
+ .quizContainer {
+    background-color: none;
+    border-radius: 10px;
+    width: 60%;
+    /*  margin: 10px;  */
+     padding-top: 20px; 
+     padding-left: 5%; 
+     padding-bottom: 50px; 
+    -moz-box-shadow: 10px 10px 5px #888;
+    -webkit-box-shadow: 10px 10px 5px #888;
+    box-shadow: 10px 10px 5px #888;
+    position: relative;
+}
+ .nextButton {
+    box-shadow: 2px 2px 4px 3px #888; 
+    border-radius: 6px;
+    width: 20%;
+    height: 20px;
+    text-align: center;
+    /* background-color: grey; */
+    clear: both;
+   /*  color: red; */
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    position: relative;
+    margin-left: 10%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    font-size: 12px;
+} 
+.previousButton {
+    box-shadow: 2px 2px 4px 3px #888; 
+    border-radius: 6px;
+    width: 20%;
+    height: 20px;
+    text-align: center;
+    /* background-color: grey; */
+    clear: both;
+   /*  color: red; */
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 30%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.submitButton {
+    box-shadow: 2px 2px 4px 3px #888; 
+    border-radius: 6px;
+    width: 10%;
+    height: 15px;
+    text-align: center;
+   /*  background-color: grey; */
+    clear: both;
+   /*  color: red; */
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    position: relative;
+    margin-top: 20px;
+    margin-left: 40%;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+.question {
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    /* width: 90%; */
+    height: auto;
+    margin: auto;
+    border-radius: 1px;
+   /* background-color: lightgrey;*/
+    text-align: left;
+}
+.quizMessage {
+    /* background-color: peachpuff; */
+    border-radius: 6px;
+    width: 30%;
+    margin-left: 40%;
+    margin-top: 20px;
+    text-align: center;
+    padding: 2px;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    color: red;
+    font-size: 12px;
+}
+.choiceList {
+   /*  font-family: Courier, serif; */
+   font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+   /*  color: blueviolet; */
+    font-size: 12px;
+}
+.result {
+    width: 30%;
+    height: auto;
+    border-radius: 6px;
+    background-color: linen;
+    margin: auto;
+    text-align: center;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+/* End of Quiz Classes */

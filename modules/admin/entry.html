@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="css/quizer.css">
+    <link rel="stylesheet" href="css/jqueryUI/jquery-ui.css">
+    <link rel="stylesheet" href="css/quizer.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/myScript.js"></script>
+  </head>
+
+  <body class="quizMenu">
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Home</a></li>
+        <li><a href="#tabs-2">Entry Form</a></li>
+        <li><a href="#tabs-3">Settings</a></li>
+      </ul>
+      <div id="tabs-1">
+          <input type="button" id="btnListQue" class="button" value="Get All Questions"/>
+          <input type="button" id="btnBackup" class="button" value="Take Backup"/>
+          <input type="button" id="btnTest" class="button" value="Take Test"/>
+          <div id="dvResult">
+            
+          </div>
+      </div>
+      <div id="tabs-2">
+        <div class="container adminForm">
+          <form id="entryForm">
+            <div class="form-group" style="width:50%;float:left">
+              <label for="question">Subject Type</label>
+              <select id="T" name="T" class="form-control form-control-ht">
+                <option>Java</option>
+                <option>MongoDB</option>
+                <option>NodeJs<option>
+              </select>
+            </div>
+            <div class="form-group" style="width:50%;float:left">
+              <label for="question">Difficulty</label>
+              <select id="D" name="D" class="form-control form-control-ht">
+                <option value="1">Biginner</option>
+                <option value="2">Intermediate</option>
+                <option value="3">Expert<option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="question">Question</label>
+              <textarea class="form-control form-control-ht textArea" id="Q" name="Q" placeholder="Enter Question"> </textarea>
+            </div>
+            <div class="form-group">
+              <label for="answer1">A</label>
+              <input type="text" class="form-control form-control-ht" id="O1" name="O1" placeholder="Enter option1">
+              <input type="checkbox" id="C1" name="C1" class="checkBoxWidth"/>
+            </div>
+             <div class="form-group">
+              <label for="answer2">B</label>
+              <input type="text" class="form-control form-control-ht" id="O2" name="O2" placeholder="Enter option2">
+              <input type="checkbox" id="C2" name="C2" class="checkBoxWidth"/>
+            </div>
+             <div class="form-group">
+              <label for="answer3">C</label>
+              <input type="text" class="form-control form-control-ht" id="O3" name="O3" placeholder="Enter option3">
+              <input type="checkbox" id="C3" name="C3" class="checkBoxWidth"/>
+            </div>
+             <div class="form-group">
+              <label for="answer3">D</label>
+              <input type="text" class="form-control form-control-ht" id="O4" name="O4" placeholder="Enter option4">
+              <input type="checkbox" id="C4" name="C4" class="checkBoxWidth"/>
+            </div>
+          </form>
+          <button id="btnSubmit">Save Question</button>
+        </div>
+      </div>
+      <div id="tabs-3">
+      Administrator Setting and question setting will go here &lt;&lt;need to be done by srikanth &gt;&gt;
+      </div>
+    </div>
+  </body>
+</html>
