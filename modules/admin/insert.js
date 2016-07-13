@@ -30,5 +30,5 @@ app.post('/insert',function(req, resp){
 	console.log("done");
 });
 
-app.get("/contestant", a.contesant);
+app.get("/help", a.contesant);
 app.get("/quiz",a.quiz);

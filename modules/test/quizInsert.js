@@ -35,5 +35,5 @@ exports.uploadQuiz=function(req, resp){
 	
 	db.questions.save(question3);
 	
-	resp.sendfile("./modules/contestant/quizcontestant.html");
+	resp.sendfile("./modules/help/quizcontestant.html");
 }

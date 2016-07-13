@@ -3,10 +3,8 @@ var http = require('http'),
 var express = require('express'),
 	app = express();
 var bodyParser = require('body-parser');
-var quizcontestant=require("./modules/contestant/quizcontestant.js");
 var admin=require("./modules/admin/admin.js");
-var examiner=require("./modules/examiner/examiner.js");
-var quizInsert=require("./modules/test/quizInsert.js");
+var help=require("./modules/help/help.js");
 
 var home=function(req,resp){
 	fs.readFile("./index.html", function(err, data) {
@@ -26,25 +24,7 @@ app.listen(3040, function(){
 });
 /* this redirection to home */
 app.get("/",home);
-/* This area is for contestant page*/
-app.get("/contestant", quizcontestant.contesant);
-app.get("/quiz",quizcontestant.quiz);
-app.get("/quizList",quizcontestant.quizList);
-app.post('/saveQuiz',quizcontestant.saveQuiz);
-app.get("/examiner",examiner.loadpage);
-app.get("/sendExamRequest",examiner.sendExamRequest);
-
-/*to be removed later */
-app.get("/uploadQuiz", quizInsert.uploadQuiz);
-
-/* This area for admin page */
-app.get("/entry", admin.entry);
-app.post('/insert',admin.insert);
-app.post('/insertForContestant',admin.insertForContestant);
-app.get('/questions',admin.questions);
-app.get('/load',admin.load);
-app.get('/backup',admin.backup);
-app.get('/find',admin.find);
-app.get('/takeTest',admin.takeTest);
-app.post("/getFromContestant",admin.getFromContestant);
+app.get("/main",admin.main);
+/* This area is for help page*/
+app.get("/help", help.f1);
 /* This area is for other user */

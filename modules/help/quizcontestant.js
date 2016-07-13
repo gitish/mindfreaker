@@ -9,7 +9,7 @@ var db = require('mongojs').connect(dbUrl, collections);
 
 
 exports.contesant=function(req, resp){
-	resp.sendfile("./modules/contestant/quizcontestant.html");
+	resp.sendfile("./modules/help/quizcontestant.html");
 	console.log("loading contesant page!!!");
 	//resp.sendfile("mytest.html");
 };
