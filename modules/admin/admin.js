@@ -9,7 +9,8 @@ app.use(bodyParser.json())
 
 exports.main=function(req,res){
 	try{
-		res.sendfile("./public/games/1.html");
+		var file=Math.floor((Math.random() * 10) + 1);
+		res.sendfile("./public/games/"+file+".html");
 	}catch(e){
 		res.end("failed");
 	}
