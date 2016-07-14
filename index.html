@@ -11,7 +11,7 @@
 	    <script src="js/jquery-ui.js"></script>
 	    <script src="js/myScript.js"></script>	
 	</head>
-	<body ng-app="quizApp" id="top">
+	<body>
 		<div class="wrapper row1">
 			<div id="header" class="clear">
 				<div class="fl_left">
@@ -37,8 +37,18 @@
 				<div  class="clear"></div>
 			</div>
 		</div>
-		<div class="wrapper row4" id="dvBody">
-			No content to display..
+		<div style="background-color: #072C53">
+			<div style="text-align: justify;font-family: Arial; font-size: medium">
+				<div id="dvBody" style="float: left; width: 45%; margin: 20px;">
+				</div>
+			</div>
+			<div style="float: left; width: 45%;text-align: left; margin: 20px;">
+				<strong>Your answer::</strong>
+				<textarea id="txtAnswer" rows="20" cols="30" style="width: 550px"></textarea>
+			</div>
+		</div>
+		<div style="text-align: right; margin-right: 100px;">
+			<input type="button" value="Submit Answer" id="btnSubmit" disabled="disabled">
 		</div>
 	</body>
 </html>
