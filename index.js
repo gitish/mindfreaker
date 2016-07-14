@@ -14,13 +14,14 @@ var home=function(req,resp){
 	});
 };
 
+app.set('port', (process.env.PORT || 3055));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(express.static(__dirname + '/public'));
 
-app.listen(3040, function(){
-	console.log('Server listening to port : 3040');
+app.listen(app.get('port'), function(){
+	console.log('Server listening to port : '+app.get('port'));
 });
 /* this redirection to home */
 app.get("/",home);

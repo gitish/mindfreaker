@@ -14,5 +14,6 @@ $(function() {
 	$("#home").click(function(){
 		loadBody("/main");
 	});
+	loadBody("/main");
 });
 
