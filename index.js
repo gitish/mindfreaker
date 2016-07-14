@@ -25,6 +25,7 @@ app.listen(3040, function(){
 /* this redirection to home */
 app.get("/",home);
 app.get("/main",admin.main);
+app.get("/old",admin.old);
 /* This area is for help page*/
 app.get("/help", help.f1);
 /* This area is for other user */
