@@ -12,7 +12,7 @@ var home=function(req,resp){
 		resp.write(data);
 		resp.end();
 	});
-}
+};
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -28,4 +28,5 @@ app.get("/main",admin.main);
 app.get("/old",admin.old);
 /* This area is for help page*/
 app.get("/help", help.f1);
+app.post("/submitAnswer",admin.submitAnswer);
 /* This area is for other user */
