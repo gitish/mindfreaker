@@ -55,20 +55,31 @@ var saveData=function(req,res){
 	var fileToUpdate="./data/"+result+".json";
 	try{
 		fs.readFile(fileToUpdate, 'utf-8', function(err, data) {
-			console.log(oldObj);
-			if(data==undefined||data=='undefined'){
-				var arr=[];
+			var arr=[];
+			if(data==undefined||data=='undefined'||data==''){
 				arr.push(obj);
-				writeToFile(fileToUpdate,arr);
 			}else{
-				var oldObj=JSON.parse(data);
-				console.log(oldObj);
-				oldObj.push(obj);
-				writeToFile(fileToUpdate,oldObj);
+				arr=JSON.parse(data);
+				console.log(arr);
+				setObject(arr,obj);
 			}
+			writeToFile(fileToUpdate,arr);
 		});
 	}catch(e){
 		console.log("Error occurred");
+	}
+};
+var setObject=function(arr,obj){
+	var found=false;
+	arr.forEach(function (ele) {
+		console.log(ele.name + "==" + obj.name);
+		if (ele.name == obj.name) {
+			ele.answer = obj.answer;
+			found=true;
+		}
+	});
+	if(!found){
+		arr.push(obj);
 	}
 };
 var writeToFile=function (fileName,obj){
