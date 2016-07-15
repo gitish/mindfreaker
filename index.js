@@ -3,6 +3,7 @@ var http = require('http'),
 var express = require('express'),
 	app = express();
 var bodyParser = require('body-parser');
+var quiz=require("./modules/quiz/quiz.js");
 var admin=require("./modules/admin/admin.js");
 var help=require("./modules/help/help.js");
 
@@ -23,11 +24,15 @@ app.use(express.static(__dirname + '/public'));
 app.listen(app.get('port'), function(){
 	console.log('Server listening to port : '+app.get('port'));
 });
-/* this redirection to home */
+/* this section handle all quiz related path */
 app.get("/",home);
-app.get("/main",admin.main);
-app.get("/old",admin.old);
-/* This area is for help page*/
+app.get("/main",quiz.main);
+app.get("/oldQPage",quiz.oldQPage);
+app.get("/old",quiz.old);
+app.post("/submitAnswer",quiz.submitAnswer);
+
+/* This section handle all admin related path */
+app.get("/showAllAnswer",admin.showAllAnswer);
+app.get("/setNew",admin.setNew);
+/* This section is for help page*/
 app.get("/help", help.f1);
-app.post("/submitAnswer",admin.submitAnswer);
-/* This area is for other user */
