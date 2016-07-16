@@ -1,6 +1,6 @@
 $(function() {
 	var loadBody=function(uri,panel,callback){
-		var dvHtml=panel==undefined?"#dvBody":panel;
+		var dvHtml=panel==undefined?"#dvPanel1":panel;
 		$.ajax({
 			url : uri,
 			type :"get",
@@ -14,13 +14,22 @@ $(function() {
 		});
 	}
 	$("#help").click(function(){
+		clean();
 		loadBody("/help");
 	});
 	$("#home").click(function(){
-		loadBody("/");
+		$("#dvNameAnswer").show();
+		$("#dvNameAnswer").width("25%");
+		$("#dvPanel1").width("65%");
+		loadBody("/main");
 	});
 	$("#oldQPage").click(function(){
+		clean();
 		loadBody("/oldQPage");
+	});
+	$("#winner").click(function () {
+		clean();
+		loadBody("/showWinner");
 	});
 	$('input[type="submit"]').attr('disabled', true);
 	$("textarea").on('keyup', function(){
@@ -44,6 +53,11 @@ $(function() {
 			}
 		});
 	});
+	var clean=function () {
+		$("#dvNameAnswer").width("1%");
+		$("#dvPanel1").width("89%");
+		$("#dvNameAnswer").hide();
+	};
 	var loadQnAData=function(result){
 		$('#dvQue').html("<h3>Question</h3>"+result.que);
 		$('#dvAns').html("<h3>Answer</h3>"+result.ans);
@@ -53,6 +67,6 @@ $(function() {
 		$("#txtAnswer").val('')
 		$("#btnSubmit").attr('disabled',true);
 	};
-	loadBody("/main");
+	$("#home").click();
 });
 

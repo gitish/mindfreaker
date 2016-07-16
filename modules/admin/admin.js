@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-exports.showAllAnswer=function (req,res) {
+exports.showUsersAnswer=function (req,res) {
 	//callback feature
 	currentQuestion(req,res,showCurrentAnswer);
 	

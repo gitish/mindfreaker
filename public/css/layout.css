@@ -115,3 +115,6 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 #copyright{padding:15px 0; border-top:1px solid #2B4D71;}
 #copyright p{margin:0; padding:0;}
 #copyright, #copyright a{color:#7F99A9; background-color:#03274B;}
+.txtPadding{
+    padding: 5px;
+}

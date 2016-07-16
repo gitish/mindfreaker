@@ -29,20 +29,22 @@ exports.oldQPage=function(req,res){
 	//callback feature
 	currentQuestion(req,res,createOldQnAPage);
 };
-
 exports.submitAnswer=function (req,res) {
 	var userName=req.body.userName;
 	//callback feature
 	currentQuestion(req,res,saveData);
 	res.end("Thanks " + userName);
 };
-
+exports.showWinner=function (req,res) {
+	res.end("In progress. Coming soon..");
+};
 var createOldQnAPage=function (req,res) {
 	var htmlData='';
 	for(var i=1;i<result;i++){
 		htmlData=htmlData+"<span class='queClass' data-val='"+i+"' href='#'>Q"+i+"</span> &nbsp;"
 	}
-	htmlData=htmlData+"<div id='dvQue' class='row2'></div><div id='dvAns' class='row2'></div>";
+	htmlData = htmlData + "<div id='dvQue' class='row2 txtPadding'></div>"
+					  +	"<div id='dvAns' class='row2 txtPadding'></div>";
 	res.end(htmlData);
 };
 var saveData=function(req,res){

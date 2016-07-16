@@ -37,8 +37,7 @@
 			</div>
 		</div>
 		<div style="background-color: #072C53">
-			<div id="dvPanel1" style="text-align: justify;font-family: Arial; font-size: medium; float:left; width: 65%; margin:10px;">
-				<div><strong>Today's Question is::</strong></div>
+			<div id="dvPanel1" style="text-align: justify;font-family: Arial; font-size: medium; float:left; min-width: 65%; margin:10px;">
 				<div id="dvBody">
 				</div>
 			</div>
@@ -47,10 +46,11 @@
 				<input type="text" id="txtName" value=""><br>
 				<strong>and answer</strong>
 				<textarea id="txtAnswer" rows="20" cols="30" style="width: 350px"></textarea>
+                <div style="text-align: right; margin-right: 100px;">
+                    <input type="submit" value="Submit Answer" id="btnSubmit">
+                </div>
 			</div>
 		</div>
-		<div style="text-align: right; margin-right: 100px;">
-			<input type="submit" value="Submit Answer" id="btnSubmit">
-		</div>
+
     </body>
 </html>
