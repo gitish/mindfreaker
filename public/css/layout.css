@@ -118,3 +118,11 @@ div.wrapper h1, div.wrapper h2, div.wrapper h3, div.wrapper h4, div.wrapper h5, 
 .txtPadding{
     padding: 5px;
 }
+.help > h4{
+    -webkit-margin-after: 0em;
+    font-size: small;
+}
+.help > p{
+    -webkit-margin-before: 0em;
+    font-size: small;
+}
