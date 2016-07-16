@@ -39,9 +39,9 @@ exports.showWinner=function (req,res) {
 	res.end("In progress. Coming soon..");
 };
 var createOldQnAPage=function (req,res) {
-	var htmlData='';
+	var htmlData='<Strong>Click on below question to see detail</Strong><br>';
 	for(var i=1;i<result;i++){
-		htmlData=htmlData+"<span class='queClass' data-val='"+i+"' href='#'>Q"+i+"</span> &nbsp;"
+		htmlData=htmlData+"<span class='queClass button' data-val='"+i+"' href='#'>Q"+i+"</span> &nbsp;"
 	}
 	htmlData = htmlData + "<div id='dvQue' class='row2 txtPadding'></div>"
 					  +	"<div id='dvAns' class='row2 txtPadding'></div>";
