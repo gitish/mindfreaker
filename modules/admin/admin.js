@@ -7,20 +7,42 @@ var quiz=require("../quiz/quiz.js");
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-
+var result, appFile="./public/games/app.json";
 exports.showUsersAnswer=function (req,res) {
 	//callback feature
 	currentQuestion(req,res,showCurrentAnswer);
-	
+};
+exports.next=function (req,res) {
+	//callback feature
+	currentQuestion(req,res,inc);
+};
+exports.previous=function (req,res) {
+	//callback feature
+	currentQuestion(req,res,dec);
 };
 exports.setNew=function(req,res){
 	var currQue={"current":req.query.id,"count":5};
-	var fileToUpdate="./public/games/app.json";
 	writeToFile(fileToUpdate,currQue);
 	res.end("Done");
 };
+exports.current=function (req,res) {
+	currentQuestion(req,res,disp);
+};
+var disp=function (req,res) {
+	res.end(result.current);
+};
+var inc=function(req,res){
+	result.current=""+(parseInt(result.current)+1);
+	writeToFile(appFile,result);
+	disp(req,res);
+};
+var dec=function(req,res){
+	result.current=""+(parseInt(result.current)-1);
+	writeToFile(appFile,result);
+	disp(req,res);
+};
 var showCurrentAnswer=function(req,res){
-	res.sendfile("./data/"+result+".json");
+	res.sendfile("./data/"+result.current+".json");
 };
 
 var writeToFile=function (fileName,obj){
@@ -33,9 +55,9 @@ var writeToFile=function (fileName,obj){
 };
 var currentQuestion=function(req, res, fu){
 	try{
-		fs.readFile("./public/games/app.json", 'utf-8', function(err, data) {
+		fs.readFile(appFile, 'utf-8', function(err, data) {
 			console.log(data);
-			result=JSON.parse(data).current;
+			result=JSON.parse(data);
 			console.log(result);
 			fu(req,res);
 		});

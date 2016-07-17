@@ -33,8 +33,10 @@ app.post("/submitAnswer",quiz.submitAnswer);
 app.get("/showWinner",quiz.showWinner);
 
 /* This section handle all admin related path */
-app.get("/showAllAnswer",admin.showUsersAnswer);
-app.get("/setNew",admin.setNew);
-
+app.get("/admin/showAllAnswer",admin.showUsersAnswer);
+app.get("/admin/next",admin.next);
+app.get("/admin/previous",admin.previous);
+app.get("/admin/setNew",admin.setNew);
+app.get("/admin/current",admin.current);
 /* This section is for help page*/
 app.get("/help", help.f1);
