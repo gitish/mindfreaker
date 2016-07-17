@@ -39,6 +39,9 @@ $(function() {
 	$('body').on('click','span.queClass',function () {
 		loadBody("/old?id="+$(this).data('val'),"#dvPanel1",loadQnAData);
 	});
+	$('body').on('click','span#btnAns',function () {
+		$("#dvAnsPanel").toggle();
+	});
 	$("#btnSubmit").click(function () {
 		$.ajax({
 			url : "/submitAnswer",
@@ -60,7 +63,7 @@ $(function() {
 	};
 	var loadQnAData=function(result){
 		$('#dvQue').html("<h3>Question</h3>"+result.que);
-		$('#dvAns').html("<h3>Answer</h3>"+result.ans);
+		$('#dvAns').html("<span id='btnAns' class='button'>Answer</span><div id='dvAnsPanel' style='display: none;'>"+result.ans+"</div>");
 	};
 	var resetAll=function(){
 		$("#txtName").val('');

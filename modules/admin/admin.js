@@ -2,7 +2,6 @@ var http = require('http'),
 	fs = require("fs");
 var express = require('express'),
 	app = express();
-var nodemailer = require('nodemailer');
 var dm=require('../../model/dataModel.js');
 var quiz=require("../quiz/quiz.js");
 var bodyParser = require('body-parser');
