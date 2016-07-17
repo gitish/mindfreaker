@@ -35,5 +35,6 @@ app.get("/showWinner",quiz.showWinner);
 /* This section handle all admin related path */
 app.get("/showAllAnswer",admin.showUsersAnswer);
 app.get("/setNew",admin.setNew);
+
 /* This section is for help page*/
 app.get("/help", help.f1);
